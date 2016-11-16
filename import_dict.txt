@@ -1,0 +1,1 @@
+{'play': {'ukulele', 'heros'}, 'write': {'manuscript': {'results', 'methods', 'discussion', 'intro'}, 'abstract': {'Wed', '300 words'}}, 'code': {'button factory', 'experiment'}, 'eat': {'cook': {'steaks', 'ziti'}, 'buy': {'eggs', 'milk'}}, 'run': {'Tues', '5 miles'}, 'invest': {'BTC', 'TSLA'}}
