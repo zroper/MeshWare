@@ -1,0 +1,1 @@
+CreateObject("Wscript.Shell").Run "MeshWare.bat", 0, True
