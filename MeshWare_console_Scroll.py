@@ -1159,12 +1159,12 @@ def main():
 
     s = ttk.Style()
     s.theme_use("default")
-    s.configure("TProgressbar", thickness=22)
-    s.configure("green.Horizontal.TProgressbar", foreground='green', background='green', thickness=22)
-    s.configure("blue.Horizontal.TProgressbar", foreground='blue', background='blue', thickness=22)
-    s.configure("yellow.Horizontal.TProgressbar", foreground='yellow', background='yellow', thickness=22)
-    s.configure("red.Horizontal.TProgressbar", foreground='red', background='red', thickness=22)
-    s.configure("purple.Horizontal.TProgressbar", foreground='purple', background='purple', thickness=22)    
+    s.configure("TProgressbar", thickness=23)
+    s.configure("green.Horizontal.TProgressbar", foreground='green', background='green', thickness=23)
+    s.configure("blue.Horizontal.TProgressbar", foreground='blue', background='blue', thickness=23)
+    s.configure("yellow.Horizontal.TProgressbar", foreground='yellow', background='yellow', thickness=23)
+    s.configure("red.Horizontal.TProgressbar", foreground='red', background='red', thickness=23)
+    s.configure("purple.Horizontal.TProgressbar", foreground='purple', background='purple', thickness=23)    
 ##    s.configure('TButton', background = 'gold')
     #s.configure('TFrame', background = '#e1d8b9')
 
