@@ -1,51 +1,21 @@
-            #------------------ MeshWare Console ------------------#
-                # Concept & Design      : Zachary J.J. Roper    #
-                # Coding Commenced      : 2016-02-10            #
-                # Coding Completed      : xxxx-xx-xx            #
-                #-----------------------------------------------#
-                
-##                                    ud$$$**$$$$$$$bc.                          
-##                                  u@**"        4$$$$$$$Nu                       
-##                                J                ""#$$$$$$r                     
-##                               @                       $$$$b                    
-##                             .F                        ^*3$$$                   
-##                            :% 4                         J$$$N                  
-##                            $  :F                       :$$$$$                  
-##                           4F  9                       J$$$$$$$                 
-##                           4$   k             4$$$$bed$$$$$$$$$                 
-##                           $$r  'F            $$$$$$$$$$$$$$$$$r                
-##                           $$$   b.           $$$$$$$$$$$$$$$$$N                
-##                           $$$$$k 3eeed$$b    $$$Euec."$$$$$$$$$                
-##            .@$**N.        $$$$$" $$$$$$F'L $$$$$$$$$$$  $$$$$$$                
-##            :$$L  'L       $$$$$ 4$$$$$$  * $$$$$$$$$$F  $$$$$$F         edNc   
-##           @$$$$N  ^k      $$$$$  3$$$$*%   $F4$$$$$$$   $$$$$"        d"  z$N  
-##           $$$$$$   ^k     '$$$"   #$$$F   .$  $$$$$c.u@$$$          J"  @$$$$r 
-##           $$$$$$$b   *u    ^$L            $$  $$$$$$$$$$$$u@       $$  d$$$$$$ 
-##            ^$$$$$$.    "NL   "N. z@*     $$$  $$$$$$$$$$$$$P      $P  d$$$$$$$ 
-##               ^"*$$$$b   '*L   9$E      4$$$  d$$$$$$$$$$$"     d*   J$$$$$r   
-##                    ^$$$$u  '$.  $$$L     "#" d$$$$$$".@$$    .@$"  z$$$$*"     
-##                      ^$$$$. ^$N.3$$$       4u$$$$$$$ 4$$$  u$*" z$$$"          
-##                        '*$$$$$$$$ *$b      J$$$$$$$b u$$P $"  d$$P             
-##                           #$$$$$$ 4$ 3*$"$*$ $"$'c@@$$$$ .u@$$$P               
-##                             "$$$$  ""F~$ $uNr$$$^&J$$$$F $$$$#                 
-##                               "$$    "$$$bd$.$W$$$$$$$$F $$"                   
-##                                 ?k         ?$$$$$$$$$$$F'*                     
-##                                  9$$bL     z$$$$$$$$$$$F                       
-##                                   $$$$    $$$$$$$$$$$$$                        
-##                                    '#$$c  '$$$$$$$$$"                          
-##                                     .@"#$$$$$$$$$$$$b                          
-##                                   z*      $$$$$$$$$$$$N.                       
-##                                 e"      z$$"  #$$$k  '*$$.                     
-##                             .u*      u@$P"      '#$$c   "$$c                   
-##                      u@$*"""       d$$"            "$$$u  ^*$$b.               
-##                    :$F           J$P"                ^$$$c   '"$$$$$$bL        
-##                   d$$  ..      @$#                      #$$b         '#$       
-##                   9$$$$$$b   4$$                          ^$$k         '$      
-##                    "$$6""$b u$$                             '$    d$$$$$P      
-##                      '$F $$$$$"                              ^b  ^$$$$b$       
-##                       '$W$$$$"                                'b@$$$$"         
-##                                                                ^$$$*
-
+##-----------------------------------------------------------------##
+##                            _    __    __                        ## 
+##            /\/\   ___  ___| |__/ / /\ \ \__ _ _ __ ___          ##
+##           /    \ / _ \/ __| '_ \ \/  \/ / _` | '__/ _ \         ##
+##          / /\/\ \  __/\__ \ | | \  /\  / (_| | | |  __/         ##     
+##          \/    \/\___||___/_| |_|\/  \/ \__,_|_|  \___|         ##                                    
+##                  ___                      _                     ##     
+##                 / __\___  _ __  ___  ___ | | ___                ##     
+##                / /  / _ \| '_ \/ __|/ _ \| |/ _ \               ##      
+##               / /__| (_) | | | \__ \ (_) | |  __/               ##     
+##               \____/\___/|_| |_|___/\___/|_|\___|               ##     
+##                                                                 ##     
+##     #------------------ MeshWare Console ------------------#    ##     
+##         # Concept & Design      : Zachary J.J. Roper    #       ##     
+##         # Coding Commenced      : 2016-02-10            #       ##                 
+##         # Coding Completed      : xxxx-xx-xx            #       ##                 
+##         #-----------------------------------------------#       ##     
+##-----------------------------------------------------------------##
 
 from tkinter import *
 from tkinter import ttk
@@ -59,9 +29,12 @@ import uuid
 import collections
 import calendar
 import time
-from PIL import Image, ImageTk
+##from PIL import Image, ImageTk
 
-path = ('C:\\Users\\Zachary Roper\\Desktop\\MeshWare')
+##Windows path path = ('C:\\Users\\Zachary Roper\\Desktop\\MeshWare')
+##pathex = path + '\\'
+path = ('/Users/zroper/Desktop/GitHub/MeshWare')
+pathex = path + '/'
 os.chdir(path)
 
 from Meshware_games import Brick_Breaker
@@ -298,8 +271,8 @@ class Input_Frame:
                          width = 15)
         self.e3.pack(fill = X, expand = True)
 
-        image = Image.open("anja.png")
-        icon = ImageTk.PhotoImage(image)
+        ##image = Image.open("anja.png")
+        ##icon = ImageTk.PhotoImage(image)
 
         self.add_task_button = ttk.Button(self.frame1,
                                           text = "submit",
@@ -1243,11 +1216,12 @@ def main():
     #scrollbar.grid(row = 0, column = 1, sticky = 'ns')
     #root.config(yscrollcommand = scrollbar.set)
 
-    logo = PhotoImage(file = 'C:\\Users\\Zachary Roper\\Desktop\
-    \MeshWare\\logo_MWbadge_gold.gif').subsample(10, 10)
+    ##logo = PhotoImage(file = 'C:\\Users\\Zachary Roper\\Desktop\
+    ##\MeshWare\\logo_MWbadge_gold.gif').subsample(10, 10)
 
-    headTexture = PhotoImage(file = 'C:\\Users\\Zachary Roper\
-    \Desktop\\MeshWare\\head_MWtexture.gif')#.subsample(10, 10)
+    logo = PhotoImage(file = pathex + 'logo_MWbadge_gold.gif').subsample(10, 10)
+
+    headTexture = PhotoImage(file = pathex + 'head_MWtexture.gif')#.subsample(10, 10)
 
     Welcomeframe = ttk.Frame(root, relief = SUNKEN)
     Welcomeframe.pack(fill = BOTH)
@@ -1338,7 +1312,7 @@ def main():
     tasks_tab_panedwindow.add(ttpw_subtaskpane, weight = 4)
 
     canvas_width = canvas.winfo_width()
-    canvas.itemconfig(frame_on_canvas, width = canvas_width, background='blue')
+    ##canvas.itemconfig(frame_on_canvas, width = canvas_width, background='blue')
     frame_on_canvas.bind("<Configure>", Scroll_Events.onFrameConfigure)
     frame_on_canvas.bind('<Enter>', Scroll_Events._bound_to_mousewheel)
     frame_on_canvas.bind('<Leave>', Scroll_Events._unbound_to_mousewheel)
