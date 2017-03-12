@@ -33,7 +33,7 @@ import collections
 import calendar
 
 
-path = ('/Users/zroper/Dropbox/MeshWare')
+path = ('/Users/zroper/Desktop/GitHub/MeshWare')
 os.chdir(path)
 
 def get_calendar(locale, fwday):
