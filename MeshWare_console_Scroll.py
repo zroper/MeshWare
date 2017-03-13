@@ -364,7 +364,6 @@ class Input_Frame:
             webbrowser.open('http://www.netflix.com/browse/my-list')
         
     def sub_button_function(button_dict):
-
         for g,h in button_dict.items():
             submittedVerb = g
             submittedVP0 = h      
@@ -568,7 +567,7 @@ class Input_Frame:
                             relief = SUNKEN)
         buttonframe.pack(fill = BOTH, expand = True)        
         
-        canvas = Canvas(buttonframe, borderwidth=0, background='pink')
+        canvas = Canvas(buttonframe, borderwidth=0, background='grey')
         frame_on_canvas = ttk.Frame(canvas)
         
         ##Pack paned window in tasks tab
@@ -782,7 +781,7 @@ class Build_Buttons:
         #ScrollCanvas(ttpw_subtaskpane).pack(side="top", fill="both", expand=True)
 
         frame = Frame(ttpw_subtaskpane,
-                      relief = SUNKEN, bg='blue')
+                      relief = SUNKEN, bg='black')
 
         frame.pack(fill = BOTH, expand = True)
         
