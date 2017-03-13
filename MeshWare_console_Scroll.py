@@ -199,11 +199,11 @@ class Build_Dicts:
     def sub_dict(input_key = '', input_value = ''):
 
         default_value_elements = ('parent name','children names','genesis date',
-                                          'hard deadline','soft deadline',
-                                          'completion date','weblink',
-                                          'filelink','parent defcon',
-                                          'self defcon','children defcon',
-                                 'self name','self id', 'complete', 'progress')
+                                  'hard deadline','soft deadline',
+                                  'completion date','weblink',
+                                  'filelink','parent defcon',
+                                  'self defcon','children defcon',
+                                  'self name','self id', 'complete', 'progress')
         write_value_elements = ('word length','text snippet','estimated duration')
         buy_value_elements = ('price','shipping','frequency')
         
@@ -430,10 +430,10 @@ class Input_Frame:
             messagebox.showinfo(title = 'MeshWare', message = ('a filename is required!'))
 
         self.clearTask_callback()
-        Build_Buttons.pack_grid_buttons()
-        Build_Buttons.pack_prog_buttons()
-        Build_Buttons.pack_prog_step_buttons()
-        Build_Buttons.pack_progress_bars()
+##        Build_Buttons.pack_grid_buttons()
+##        Build_Buttons.pack_prog_buttons()
+##        Build_Buttons.pack_prog_step_buttons()
+##        Build_Buttons.pack_progress_bars()
 
     def transfer_text_callback(buttontext = ''):
         print(buttontext)
@@ -444,10 +444,10 @@ class Input_Frame:
     def go_home_callback(self):
         Load_Dict.Load_Button_Values(test_verb_dict)
         self.clearTask_callback()
-        Build_Buttons.pack_grid_buttons()
-        Build_Buttons.pack_prog_buttons()
-        Build_Buttons.pack_prog_step_buttons()
-        Build_Buttons.pack_progress_bars()
+ #       Build_Buttons.pack_grid_buttons()
+##        Build_Buttons.pack_prog_buttons()
+##        Build_Buttons.pack_prog_step_buttons()
+##        Build_Buttons.pack_progress_bars()
         
     def addTask_callback(self):
         global verbentry0
@@ -547,13 +547,15 @@ class Input_Frame:
     def clearTask_callback(self=0):
         global buttonframe
         global progressframe
+        global canvas
         
         buttonframe.pack_forget()
         buttonframe.destroy()
         progressframe.pack_forget()
         progressframe.destroy()
+        canvas.pack_forget()
+        canvas.destroy()
         
-
         progressframe = Frame(progress_tab_frame,
                         relief = SUNKEN,
                           bg = 'grey')
@@ -561,9 +563,8 @@ class Input_Frame:
         
         buttonframe = Frame(tasks_tab_frame,
                             relief = SUNKEN)
-        buttonframe.pack(fill = BOTH, expand = True)
+        buttonframe.pack(fill = BOTH, expand = True)        
         
-        global canvas
         canvas = Canvas(buttonframe, borderwidth=0, background='pink')
         frame_on_canvas = ttk.Frame(canvas)
         
@@ -597,7 +598,7 @@ class Input_Frame:
         frame_on_canvas.bind('<Leave>', Scroll_Events._unbound_to_mousewheel)
 
         Build_Buttons.pack_grid_buttons()
-
+        
         ##Progress paned windows
         ProgressbarPanes = ttk.Panedwindow(progressframe, orient = HORIZONTAL)
         ProgressbarPanes.pack(fill = BOTH, expand = True)
@@ -616,7 +617,11 @@ class Input_Frame:
         ProgressbarPanes.add(progresstab_taskpane, weight = 2)
         ProgressbarPanes.add(barsframe, weight = 6)
         ProgressbarPanes.add(statsframe1, weight = 1)
-        ProgressbarPanes.add(statsframe2, weight = 1)   
+        ProgressbarPanes.add(statsframe2, weight = 1)
+        
+        Build_Buttons.pack_prog_buttons()
+        Build_Buttons.pack_prog_step_buttons()
+        Build_Buttons.pack_progress_bars()
         
     def progress_step_button_function(self, step): #self = task name as string
         
@@ -782,7 +787,7 @@ class Build_Buttons:
             for f in t:
 ##                print(g)
 ##                print(f)
-                defcon = test_verb_dict[g][f]['self defcon']
+                defcon = 1##test_verb_dict[g][f]['self defcon']
 ##                print(defcon)
                 if defcon == {'1':{}}:
                     b_style = 'red.TButton'
@@ -1146,8 +1151,8 @@ def main():
     root.title('MeshWare Console')
     root.resizable(True, True)
     root.configure(background = 'grey', padx = 10, pady = 10, relief = SUNKEN)
-    sizex = 800
-    sizey = 500
+    sizex = 1200
+    sizey = 800
     posx  = 0
     posy  = 0
     root.geometry("%dx%d+%d+%d" % (sizex, sizey, posx, posy))
@@ -1238,7 +1243,7 @@ def main():
     Welcome.config(justify = CENTER)
     Welcome.config(font = ('Helvetica', 32, 'bold'))
     Welcome2.config(justify = CENTER)
-    Welcome2.config(font = ('Helvetica', 8, 'bold'))
+    Welcome2.config(font = ('Helvetica', 20, 'bold'))
 
 
     panedwindow = ttk.Panedwindow(root, orient = HORIZONTAL)
@@ -1289,7 +1294,7 @@ def main():
     ##Pack paned window in tasks tab
     global tasks_tab_panedwindow
     tasks_tab_panedwindow = ttk.Panedwindow(frame_on_canvas, orient = HORIZONTAL)
-    tasks_tab_panedwindow.pack(fill = 'x')
+    tasks_tab_panedwindow.pack(fill = 'x', expand=True)
     vsb = Scrollbar(buttonframe, orient="vertical", command=canvas.yview)
     hsb = Scrollbar(buttonframe, orient="horizontal", command=canvas.xview)
     canvas.configure(yscrollcommand=vsb.set)
