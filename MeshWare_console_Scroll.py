@@ -429,7 +429,9 @@ class Input_Frame:
         else:
             messagebox.showinfo(title = 'MeshWare', message = ('a filename is required!'))
 
-        self.clearTask_callback()
+        self.go_home_callback()
+##        self.clearTask_callback()
+##        self.clearTask_callback()
 ##        Build_Buttons.pack_grid_buttons()
 ##        Build_Buttons.pack_prog_buttons()
 ##        Build_Buttons.pack_prog_step_buttons()
@@ -442,12 +444,12 @@ class Input_Frame:
         verbentry0.insert(0, buttontext)
         
     def go_home_callback(self):
-        Load_Dict.Load_Button_Values(test_verb_dict)
+##        Load_Dict.Load_Button_Values(test_verb_dict)
         self.clearTask_callback()
- #       Build_Buttons.pack_grid_buttons()
-##        Build_Buttons.pack_prog_buttons()
-##        Build_Buttons.pack_prog_step_buttons()
-##        Build_Buttons.pack_progress_bars()
+        Build_Buttons.pack_grid_buttons()
+        Build_Buttons.pack_prog_buttons()
+        Build_Buttons.pack_prog_step_buttons()
+        Build_Buttons.pack_progress_bars()
         
     def addTask_callback(self):
         global verbentry0
@@ -545,6 +547,7 @@ class Input_Frame:
         Build_Buttons.pack_progress_bars()
         
     def clearTask_callback(self=0):
+        
         global buttonframe
         global progressframe
         global canvas
@@ -597,7 +600,7 @@ class Input_Frame:
         frame_on_canvas.bind('<Enter>', Scroll_Events._bound_to_mousewheel)
         frame_on_canvas.bind('<Leave>', Scroll_Events._unbound_to_mousewheel)
 
-        Build_Buttons.pack_grid_buttons()
+##        Build_Buttons.pack_grid_buttons()
         
         ##Progress paned windows
         ProgressbarPanes = ttk.Panedwindow(progressframe, orient = HORIZONTAL)
@@ -619,9 +622,9 @@ class Input_Frame:
         ProgressbarPanes.add(statsframe1, weight = 1)
         ProgressbarPanes.add(statsframe2, weight = 1)
         
-        Build_Buttons.pack_prog_buttons()
-        Build_Buttons.pack_prog_step_buttons()
-        Build_Buttons.pack_progress_bars()
+##        Build_Buttons.pack_prog_buttons()
+##        Build_Buttons.pack_prog_step_buttons()
+##        Build_Buttons.pack_progress_bars()
         
     def progress_step_button_function(self, step): #self = task name as string
         
@@ -1289,6 +1292,7 @@ def main():
     input_panel = Input_Frame(frame0, buttonframe)
     global canvas
     canvas = Canvas(buttonframe, borderwidth=0, background='green')
+    global frame_on_canvas
     frame_on_canvas = ttk.Frame(canvas)
     
     ##Pack paned window in tasks tab
