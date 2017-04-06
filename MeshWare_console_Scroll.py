@@ -30,6 +30,7 @@ import collections
 import calendar
 import time
 ##from PIL import Image, ImageTk
+import pdb; pdb.set_trace()
 
 ##Windows path path = ('C:\\Users\\Zachary Roper\\Desktop\\MeshWare')
 ##pathex = path + '\\'
